@@ -58,6 +58,8 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            'sslmode' => 'require', // Add this line
+            'sslrootcert' => '/home/site/wwwroot/ssl/DigCertGlobalRootCA.crt.pem', // Add this line
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
